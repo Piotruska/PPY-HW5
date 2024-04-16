@@ -24,6 +24,9 @@ def add(slist, product, quantity):
 def remove(slist, product):
     if product in slist:
         del slist[product]
+        print(f"Removed {product} from the shopping list.")
+    else:
+        print(f"{product} not found.")
 
 def display(slist):
     for product, quantity in slist.items():
@@ -52,7 +55,7 @@ while True:
     elif choice == "2":
         product = input("Enter the product name to remove: ")
         remove(shopping_list, product)
-        print(f"Removed {product} from the shopping list.")
+
 
     elif choice == "3":
         print("\nCurrent Shopping List:")
