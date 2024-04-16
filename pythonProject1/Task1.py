@@ -15,6 +15,12 @@ def save(slist, filename):
         for product, quantity in slist.items():
             file.write(f"{product}\t{quantity}\n")
 
+def add(slist, product, quantity):
+    if product in slist:
+        slist[product] += quantity
+    else:
+        slist[product] = quantity
+
     if choice == "1":
         product = input("Enter the product name: ")
         quantity = int(input("Enter the quantity: "))
