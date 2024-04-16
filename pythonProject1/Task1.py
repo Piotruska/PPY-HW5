@@ -30,6 +30,19 @@ def display(slist):
         print(f"{product}:\t{quantity}")
 
 
+
+filename = "list.txt"
+shopping_list = load_list(filename)
+
+while True:
+    print("\nOptions:")
+    print("1. Add a product")
+    print("2. Remove a product")
+    print("3. Display the shopping list")
+    print("4. Save and exit")
+
+    choice = input("Enter your choice (1-4): ")
+
     if choice == "1":
         product = input("Enter the product name: ")
         quantity = int(input("Enter the quantity: "))
