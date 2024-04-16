@@ -21,6 +21,11 @@ def add(slist, product, quantity):
     else:
         slist[product] = quantity
 
+def remove(slist, product):
+    if product in slist:
+        del slist[product]
+
+
     if choice == "1":
         product = input("Enter the product name: ")
         quantity = int(input("Enter the quantity: "))
