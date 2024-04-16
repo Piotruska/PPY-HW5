@@ -25,6 +25,10 @@ def remove(slist, product):
     if product in slist:
         del slist[product]
 
+def display(slist):
+    for product, quantity in slist.items():
+        print(f"{product}:\t{quantity}")
+
 
     if choice == "1":
         product = input("Enter the product name: ")
